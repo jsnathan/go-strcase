@@ -26,7 +26,7 @@ func lowerDelimiterCase(s string, delimiter rune) string {
 				buffer = append(buffer, delimiter)
 			}
 		} else if isUpper(curr) {
-			if isLower(prev) || (isUpper(prev) && isLower(next)) {
+			if isLower(prev) {
 				buffer = append(buffer, delimiter)
 			}
 			buffer = append(buffer, toLower(curr))
