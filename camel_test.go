@@ -1,4 +1,4 @@
-// Copyright (c) 2017, A. Stoewer <adrian.stoewer@rz.ifi.lmu.de>
+// Copyright (c) 2017, A. Stoewer <adrian.jsnathan@rz.ifi.lmu.de>
 // All rights reserved.
 
 package strcase_test
@@ -6,7 +6,7 @@ package strcase_test
 import (
 	"testing"
 
-	"github.com/stoewer/go-strcase"
+	"github.com/jsnathan/go-strcase"
 	"github.com/stretchr/testify/assert"
 )
 

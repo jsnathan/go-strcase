@@ -1,4 +1,4 @@
-// Copyright (c) 2017, A. Stoewer <adrian.stoewer@rz.ifi.lmu.de>
+// Copyright (c) 2017, A. Stoewer <adrian.jsnathan@rz.ifi.lmu.de>
 // All rights reserved.
 
 package strcase
@@ -20,17 +20,21 @@ func lowerDelimiterCase(s string, delimiter rune) string {
 
 	var prev rune
 	var curr rune
+  var upCount = 0
 	for _, next := range s {
 		if isDelimiter(curr) {
+      upCount = 0
 			if !isDelimiter(prev) {
 				buffer = append(buffer, delimiter)
 			}
 		} else if isUpper(curr) {
-			if isLower(prev) {
+			if isLower(prev) || (upCount > 1 && isLower(next)) {
 				buffer = append(buffer, delimiter)
 			}
 			buffer = append(buffer, toLower(curr))
+      upCount++
 		} else if curr != 0 {
+      upCount = 0
 			buffer = append(buffer, curr)
 		}
 		prev = curr

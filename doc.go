@@ -1,4 +1,4 @@
-// Copyright (c) 2017, A. Stoewer <adrian.stoewer@rz.ifi.lmu.de>
+// Copyright (c) 2017, A. Stoewer <adrian.jsnathan@rz.ifi.lmu.de>
 // All rights reserved.
 
 // Package strcase converts between different kinds of naming formats such as camel case
